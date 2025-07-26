@@ -1,24 +1,42 @@
 # 🚩 Desafio 03 - Descrições Sintáticas e Semânticas
 Este desafio tem como proposta criar uma mini-gramática fictícia para uma linguagem de minha autoria com exemplos de análise léxica.
 
-## Etapas de processamento
-**Análise Léxica:** Nesta fase inicial, o código-fonte bruto é lido e fatiado em seus componentes mais básicos, os "tokens". Pense nisso como desmontar uma frase em suas palavras e sinais de pontuação individuais.
+## 1. Objetivo da Linguagem (Optic)
+Ser uma linguagem de programação didática, simples e legível, voltada para iniciantes ou fins educacionais, onde o foco é ler e mostrar valores, tomar decisões simples, e manipular dados básicos (texto e número).
 
-**Análise Sintática:** Organiza os tokens em uma hierarquia, geralmente uma "árvore de sintaxe", para garantir que o código esteja formatado corretamente, da mesma forma que uma oração precisa de um sujeito e um verbo na ordem certa para ser válida.
+## 2. Lexemas e Tokens
+| Categoria           | Exemplos                 | Token                    |
+| ------------------- | ------------------------ | ------------------------ |
+| Palavra-chave       | `VAR`, `SE`, `FAZ`, ...  | `PALAVRA_CHAVE`          |
+| Identificador       | `cpf`, `sexo`          | `IDENTIFICADOR`          |
+| Número literal      | `26`, `1050`             | `LITERAL_NUMERO`         |
+| Texto literal       | `"Olá"`                   | `LITERAL_TEXTO`          |
+| Atribuição          | `<-`                     | `SETA_ATRIBUICAO`        |
+| Relacional          | `=`, `>`, `<`            | `OPERADOR_RELACIONAL`    |
+| Aritmético          | `+`, `-`                 | `OPERADOR_ARITMETICO`    |
+| Pontuação           | `:`                      | `DOIS_PONTOS`            |
+| Comentários (extra) | `# O que está aqui é ignorado` | Ignorado pelo analisador |
 
-**Análise Semântica:** Depois de confirmar que a "gramática" do código está correta, esta análise verifica se o código faz sentido lógico. Ela investiga o significado por trás da estrutura, procurando por erros de coerência. É aqui que o sistema garante que você só use variáveis que já foram criadas e que não tente realizar operações impossíveis, como multiplicar um texto por um número.
 
-**Parsing:** É o processo de transformar dados brutos (geralmente texto) em uma estrutura de dados mais organizada, como uma árvore sintática ou um objeto Python, que pode ser mais facilmente processado por um computador.
+## Estrutura BNF
+```bnf
+<programa>     ::= <comando>+
 
-## Compilador
-- Em poucas palavras, traduz o código-fonte fornecido pelo usuário em alguma linguagem de alto nível para uma versão de código baixo nível, que é a versão do código que o computador/processador pode ler e executar.
-- **GCC (GNU Compiler Collection),** é o compilador das linguagens **C/C++**
+<comando>      ::= <declaracao> | <atribuicao> | <io> | <decisao>
 
+<declaracao>   ::= VAR <identificador> : <tipo>
+<tipo>         ::= NUMERO | TEXTO
 
-## Interpretador
-- Software que age como um "tradutor simultâneo" para o código-fonte. Em vez de converter o programa inteiro para a linguagem da máquina de uma só vez, ele lê e executa cada instrução passo a passo, de forma sequencial. Dessa forma, a tradução de uma linha de código acontece no exato momento em que ela precisa ser executada, em um processo contínuo de leitura e ação.
-- **Python, JavaScript, PHP e Ruby** são exemplos.
+<atribuicao>   ::= <identificador> <- <expressao>
 
-## Máquina Virtual
-- Uma Máquina Virtual (VM) de Aplicação é um ambiente de software que funciona como um "computador intermediário". Ela cria uma camada de abstração que permite a um programa rodar de forma idêntica em qualquer plataforma, independentemente do hardware ou do sistema operacional real.
-- **VirtualBox** é um exemplo.
+<io>           ::= MOSTRAR <expressao> | LER <identificador>
+
+<decisao>      ::= SE <condicao> FAZ <comando>+ FIM_SE
+
+<condicao>     ::= <expressao> <operador_relacional> <expressao>
+<operador_relacional> ::= "=" | "<" | ">"
+
+<expressao>    ::= <termo> ( <operador_aritmetico> <termo> )?
+<termo>        ::= <identificador> | <numero_literal> | <texto_literal>
+```
+
