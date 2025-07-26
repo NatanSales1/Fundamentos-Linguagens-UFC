@@ -1,5 +1,5 @@
 # 🚩 Desafio 03 - Descrições Sintáticas e Semânticas
-Este desafio tem como proposta criar uma mini-gramática fictícia para uma linguagem de minha autoria.
+Este desafio tem como proposta criar uma mini-gramática fictícia para uma linguagem de minha autoria com exemplos de análise léxica.
 
 ## Etapas de processamento
 **Análise Léxica:** Nesta fase inicial, o código-fonte bruto é lido e fatiado em seus componentes mais básicos, os "tokens". Pense nisso como desmontar uma frase em suas palavras e sinais de pontuação individuais.
