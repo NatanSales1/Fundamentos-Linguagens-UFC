@@ -4,7 +4,7 @@ Este desafio tem como proposta pesquisar e **montar uma linha do tempo** da evol
 ## 1. Linha do tempo (Timeline)
 A evolução das linguagens de programação tem sido um campo dinâmico, marcado pela  introdução de novos paradigmas, aprimoramentos em características fundamentais e a resposta às crescentes demandas da computação. 
 
-![Timeline](https://github.com/user-attachments/assets/ee387be8-2222-4c3f-b2d0-3ff418ef1825)
+> ![Linha do Tempo das Linguagens](timeline.pdf)
 
 ## 2. Breve detalhamento de cada intervalo de tempo
 ### Década de 1940: A Gênese
