@@ -1,4 +1,4 @@
-# Desafio 01 - Introdução as Linguagens de Programação
+# 🚩Desafio 01 - Introdução as Linguagens de Programação
 Este desafio tem como proposta pesquisar e **montar uma linha do tempo** da evolução das linguagens, destacando marcos que eu considerar mais relevantes.
 
 ## 1. Linha do tempo (Timeline)
