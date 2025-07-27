@@ -1,6 +1,9 @@
+# 🚩 Desafio 05 - Estruturas de Controle
+Este desafio nos propõe a criação de um programa simples,  que use estruturas de seleção, repetição e controle de fluxo. A linguagem escolhida foi C#, e o contexto será a de um assistente acadêmico que auxilia qualquer estudante que deseja realizar um trabalho de escola ou faculdade. O programa funciona assim: o estudante escolhe o tipo de atividade a ser realizada e lhe é recomendado uma Inteligência Artificial de acordo com uma análise prévia feita pelo assistente para se encaixar melhor no trabalho.
 
-
-
+### Código abaixo em C#
+---
+### `AssistenteAcademicoAI.cs`
 ```C#
 using System;
 using System.Threading;
