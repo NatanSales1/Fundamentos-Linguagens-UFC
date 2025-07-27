@@ -74,3 +74,64 @@ public class Demonstracao
 
 - Resultado: O método recebe a referência e atribui o valor inicial à variável texto.
 
+### TypeScript: Simplicidade com "Passagem por Compartilhamento"
+- Em C#, a regra geral é que os parâmetros são passados por valor. No entanto, o comportamento exato depende se o tipo do parâmetro é um tipo de valor (como int, double, bool, struct) ou um tipo de referência (como class, array, string). Para uma passagem explícita por referência, o C# oferece as palavras-chave ref e out.
+
+`Exemplo.ts`
+```TypeScript
+
+function demonstracaoPorValor(valor: number): void {
+  valor = valor * 2;
+  console.log(`   -> Dentro da função (primitivo): ${valor}`);
+}
+
+interface Pessoa {
+  nome: string;
+}
+
+function demonstracaoPorValorComObjeto(pessoa: Pessoa): void {
+  pessoa.nome = "Maria"; 
+  pessoa = { nome: "João" }; 
+  console.log(`   -> Dentro da função (objeto): Nome alterado para 'Maria', tentativa de reatribuir para 'João'`);
+}
+
+interface ValorWrapper {
+    valor: number;
+}
+
+function simularPassagemPorReferencia(wrapper: ValorWrapper): void {
+    wrapper.valor = wrapper.valor * 2;
+    console.log(`   -> Dentro da função (wrapper): ${wrapper.valor}`);
+}
+
+console.log("--- 1. Demonstração de Passagem por VALOR (com tipo primitivo) ---");
+let numeroPrimitivo: number = 10;
+console.log(`Antes da chamada: ${numeroPrimitivo}`);
+demonstracaoPorValor(numeroPrimitivo);
+console.log(`Depois da chamada: ${numeroPrimitivo} (inalterado)\n`);
+
+
+console.log("--- 2. Demonstração de Passagem por VALOR (com tipo de objeto) ---");
+let pessoaOriginal: Pessoa = { nome: "Ana" };
+console.log(`Antes da chamada: ${pessoaOriginal.nome}`);
+demonstracaoPorValorComObjeto(pessoaOriginal);
+console.log(`Depois da chamada: ${pessoaOriginal.nome} (propriedade alterada, mas não o objeto)\n`);
+
+
+console.log("--- 3. Simulação de Passagem por REFERÊNCIA (usando um objeto wrapper) ---");
+let numeroWrapper: ValorWrapper = { valor: 15 };
+console.log(`Antes da chamada: ${numeroWrapper.valor}`);
+simularPassagemPorReferencia(numeroWrapper);
+console.log(`Depois da chamada: ${numeroWrapper.valor} (alterado)`);
+```
+#### 1. Passagem por Valor (Primitivo):
+
+- O método recebe uma cópia do valor 10. A alteração (valor * 2) ocorre apenas nesta cópia, e a variável original numeroPrimitivo permanece inalterada.
+
+#### 2. Passagem por Valor (Objeto):
+
+- O método recebe uma cópia da referência ao objeto Pessoa. Por isso, consegue usar essa referência para alterar o conteúdo do objeto original (nome vira "Maria"), mas não consegue reatribuir a variável original a um novo objeto.
+
+#### 3. Simulação de Referência (Wrapper):
+
+- Este é um padrão que usa a regra anterior a seu favor. Ao passar um objeto (ValorWrapper), a função pode modificar suas propriedades. Como a referência aponta para o mesmo objeto original, a alteração é refletida externamente.
