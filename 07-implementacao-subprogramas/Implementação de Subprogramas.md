@@ -46,7 +46,7 @@ int main()
 ```
 Abaixo, o desenho representativo da função `somaAlgarismos`
 
-> ![Call Stack](Desenho_pilha.jpg)
+> ![Call Stack](./Desenho_pilha.jpg)
 
 ### 1. somaAlgarismos
 
