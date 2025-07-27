@@ -89,3 +89,15 @@ class AssistenteAcademicoAI
     }
 }
 ```
+
+### O programa em questão utiliza:
+
+- **Estrutura de Repetição:** Um loop while (true) para manter o programa ativo até que o usuário decida sair.
+
+- **Estrutura de Seleção:** Um switch para analisar a entrada do usuário e direcionar para a recomendação correta. É mais limpo que múltiplos if-else if para este caso.
+
+#### **Controle de Fluxo:**
+
+**break:** Para sair do loop while quando o usuário digita "sair".
+
+**continue:** Para ignorar entradas inválidas e voltar ao início do loop, solicitando uma nova entrada.
