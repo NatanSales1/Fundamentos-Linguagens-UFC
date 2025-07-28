@@ -38,4 +38,4 @@ Repositório destinado à entrega do trabalho final da disciplina de Linguagens 
 ## 💻 Linguagens Utilizadas e Outras Tecnologias :
 **C#, TypeScript, Java, C e Python**
 
-**Diagramas e representações visuais:** Miro
+Diagramas e representações visuais: **Miro**
