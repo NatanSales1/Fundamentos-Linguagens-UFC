@@ -36,6 +36,6 @@ Repositório destinado à entrega do trabalho final da disciplina de Linguagens 
 ➔ Escolha uma linguagem emergente, investigue e elabore uma apresentação textual crítica sobre ela.
 
 ## 💻 Linguagens Utilizadas e Outras Tecnologias :
-**C#, TypeScript, Java, C e Python**
+**C#, TypeScript, Java, C, Python e Prolog**
 
 Diagramas e representações visuais: **Miro**
