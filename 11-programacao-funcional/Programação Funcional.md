@@ -74,6 +74,12 @@ console.log(`A pontuação final do time é: ${pontuacaoFinal} pontos.`);
 // Saída: A pontuação final do time é: 10 pontos.
 ```
 
+## Explicação dos Princípios Funcionais Aplicados
+
+- **Funções Puras:** As funções `calcularPontosPartida` e `calcularPontosTotais` são puras. Seus resultados dependem exclusivamente de suas entradas e não possuem efeitos colaterais observáveis.
+- **Imutabilidade:** A solução não modifica a lista original de partidas. A cada chamada recursiva, uma nova lista (o "resto") é criada, preservando a imutabilidade dos dados.
+- **Recursão:** A recursão é utilizada para iterar sobre a lista de partidas de uma maneira funcional, evitando laços de repetição tradicionais como for ou while.
+- **Funções de Alta Ordem:** calcularPontosTotais é uma função de alta ordem, o que aumenta a flexibilidade e a reutilização do código. Poderíamos, por exemplo, passar uma função de cálculo de pontos diferente para um campeonato com regras de pontuação distintas, sem alterar a lógica principal de calcularPontosTotais.
 
 
 
