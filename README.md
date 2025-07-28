@@ -3,7 +3,9 @@ Repositório destinado à entrega do trabalho final da disciplina de Linguagens 
 
 - A atividade propõe desafios que abrangem os **14 tópicos fundamentais** estudados ao longo da disciplina, incentivando a pesquisa, a análise comparativa e o desenvolvimento de pequenos experimentos ou exemplos práticos. A entrega do trabalho será feita através da resolução e postagem desses **14 desafios** no presente repositório.
 
-### Desafios
+---
+
+### 🚩 Desafios Propostos
 1. **Introdução às Linguagens de Programação**
 ➔ Pesquise e monte uma linha do tempo da evolução das linguagens, destacando marcos que você considerar mais relevantes.
 2. **Ambientes de Programação**
@@ -33,3 +35,5 @@ Repositório destinado à entrega do trabalho final da disciplina de Linguagens 
 14. **Tendências em Linguagens de Programação**
 ➔ Escolha uma linguagem emergente, investigue e elabore uma apresentação textual crítica sobre ela.
 
+## 💻 Linguagens Utilizadas:
+**C#, TypeScript, Java, C e Python**
