@@ -35,5 +35,7 @@ Repositório destinado à entrega do trabalho final da disciplina de Linguagens 
 14. **Tendências em Linguagens de Programação**
 ➔ Escolha uma linguagem emergente, investigue e elabore uma apresentação textual crítica sobre ela.
 
-## 💻 Linguagens Utilizadas:
+## 💻 Linguagens Utilizadas e Outras Tecnologias :
 **C#, TypeScript, Java, C e Python**
+
+**Diagramas e representações visuais:** Miro
